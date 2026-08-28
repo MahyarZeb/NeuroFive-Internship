@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeBloom 🌸</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="background-flower flower-one">✿</div>
+<div class="background-flower flower-two">✿</div>
+<div class="background-flower flower-three">✿</div>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="logo">🌸</div>
+
+        <h1>Resume<span>Bloom</span></h1>
+
+        <p>
+            Give your resume a little AI-powered sunshine.
+            <br>
+            See what's strong, what's missing, and how to improve it.
+        </p>
+    </section>
+
+
+    <section class="card input-card">
+
+        <div class="section-title">
+            <span>01</span>
+            <h2>Your resume</h2>
+        </div>
+
+        <textarea
+            id="resume"
+            placeholder="Paste your resume here...
+
+Example:
+Software Engineering Student
+Python • Flask • SQL • Git
+
+Built a web application...
+"
+        ></textarea>
+
+
+        <div class="section-title">
+            <span>02</span>
+            <h2>Target job</h2>
+        </div>
+
+        <textarea
+            id="jobDescription"
+            placeholder="Paste the job description here..."
+        ></textarea>
+
+
+        <button id="analyzeBtn" onclick="analyzeResume()">
+            <span>Bloom my resume</span>
+            🌷
+        </button>
+
+        <p id="error" class="error"></p>
+
+    </section>
+
+
+    <section id="results" class="results hidden">
+
+        <div class="score-card">
+
+            <div>
+                <p class="eyebrow">YOUR BLOOM SCORE</p>
+                <h2 id="score">--</h2>
+                <p id="summary"></p>
+            </div>
+
+            <div class="score-flower">
+                🌸
+            </div>
+
+        </div>
+
+
+        <div class="grid">
+
+            <div class="card result-card">
+                <h3>✨ What's working</h3>
+                <ul id="strengths"></ul>
+            </div>
+
+
+            <div class="card result-card">
+                <h3>🔎 Keywords to consider</h3>
+                <div id="keywords" class="tags"></div>
+            </div>
+
+        </div>
+
+
+        <div class="card result-card">
+            <h3>🌱 How to improve</h3>
+            <div id="improvements"></div>
+        </div>
+
+
+        <div class="card result-card">
+            <h3>🌷 Before → After</h3>
+            <div id="rewrites"></div>
+        </div>
+
+
+        <div class="card result-card">
+            <h3>💬 Practice interview questions</h3>
+            <ol id="questions"></ol>
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made with curiosity & a little AI magic ✨
+    </footer>
+
+</main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
